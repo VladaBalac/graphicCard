@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col">
+		<app-form (javiComentar)="javiComentar($event)"></app-form>
+		<br>
+	</div>
+</div>
+<div class="row" *ngFor="let i of comm">
+	<div class="col" >
+		<app-comments [com]="i"></app-comments>
+	</div>
+</div>

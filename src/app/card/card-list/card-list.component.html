@@ -1,0 +1,23 @@
+<div class="sve">
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<div class="col-8">
+					<div class="row">
+						<div class="col-6">
+							<!-- <app-pagination [card]="count" ></app-pagination> -->
+							<app-pagination [curentPage]="params.page" [pageSize]="params.pageSize" [totalCards]="count" (javi)="refresh($event)"></app-pagination>
+						</div>
+						<div class="col-6">
+							<app-page-size [pageSize]="size" [activePageSize]="params.pageSize" (pageSizeChange)="refresh($event)"></app-page-size>
+						</div>
+					</div>
+					<app-card [cards]="card"></app-card>
+					<br>
+					<app-grade></app-grade>
+				</div>
+				<div class="col-4">
+					<router-outlet></router-outlet>
+				</div>
+			</div>
+		</div>

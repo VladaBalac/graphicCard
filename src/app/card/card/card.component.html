@@ -1,0 +1,16 @@
+<div class="row" *ngFor="let i of cards">
+	<div class="col-2">
+		<img widt=100% src="{{i.image}}">
+	</div>
+	<div class="col-10">
+		<a [routerLink]="[i._id, 'comments']">{{i.title}}</a>
+		<small>{{i.subtitle}}</small>
+		<br>
+		{{i.description}}
+		<br>
+		<button class="btn btn-success" (click)="vote(i.grade + 1)">+</button>
+		{{i.grade}}
+		<button class="btn btn-danger" (click)="vote(i.grade - 1)">-</button>
+	</div>
+</div>
+

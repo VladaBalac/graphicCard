@@ -1,0 +1,19 @@
+<form>
+
+	<input class="form-control" name="name" type="text" placeholder="Name" [(ngModel)]="comentar.author">
+	<br>
+	<textarea class="form-control" name="comment" placeholder="Comment" type="text" [(ngModel)]="comentar.text"></textarea>
+	<br>
+	<button class="btn btn-primary" (click)="prosledi()">Submit</button>
+	
+</form>
+
+<!-- <form[formGroup]="forma" (submit)="prosledi()">
+
+	<input type="text" class="form-control" id="author" placeholder="Name" formControlName="name">
+	<br>
+	<textarea class="form-control" id="text" placeholder="Comment" formControlName="comment"></textarea>
+	<br>
+	<button class="btn btn-primary" type="submit">Submit</button>
+	
+</form> -->
